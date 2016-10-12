@@ -8,11 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class AccessibilityTestViewController: UIViewController {
+    
+    var mainBackgroundContainerView = RedContainerView(frame: CGRect.zero)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        mainBackgroundContainerView = RedContainerView(frame: UIScreen.main.bounds)
+        view.addSubview(mainBackgroundContainerView)
     }
 
     override func didReceiveMemoryWarning() {

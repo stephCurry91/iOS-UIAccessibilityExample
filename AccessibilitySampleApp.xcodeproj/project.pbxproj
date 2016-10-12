@@ -14,6 +14,10 @@
 		8228DE8C1DAD7A5F00991184 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8228DE8A1DAD7A5F00991184 /* LaunchScreen.storyboard */; };
 		8228DE971DAD7A5F00991184 /* AccessibilitySampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8228DE961DAD7A5F00991184 /* AccessibilitySampleAppTests.swift */; };
 		8228DEA21DAD7A5F00991184 /* AccessibilitySampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8228DEA11DAD7A5F00991184 /* AccessibilitySampleAppUITests.swift */; };
+		8228DEB01DAD7ACD00991184 /* RedContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8228DEAF1DAD7ACD00991184 /* RedContainerView.swift */; };
+		8228DEB21DAD7AFD00991184 /* BlackContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8228DEB11DAD7AFD00991184 /* BlackContainerView.swift */; };
+		8228DEB41DAD91F900991184 /* LeafButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8228DEB31DAD91F900991184 /* LeafButtonView.swift */; };
+		8228DEB61DAD921700991184 /* LeafLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8228DEB51DAD921700991184 /* LeafLabelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		8228DE9D1DAD7A5F00991184 /* AccessibilitySampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccessibilitySampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8228DEA11DAD7A5F00991184 /* AccessibilitySampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilitySampleAppUITests.swift; sourceTree = "<group>"; };
 		8228DEA31DAD7A5F00991184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8228DEAF1DAD7ACD00991184 /* RedContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedContainerView.swift; sourceTree = "<group>"; };
+		8228DEB11DAD7AFD00991184 /* BlackContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackContainerView.swift; sourceTree = "<group>"; };
+		8228DEB31DAD91F900991184 /* LeafButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeafButtonView.swift; sourceTree = "<group>"; };
+		8228DEB51DAD921700991184 /* LeafLabelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeafLabelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,10 @@
 			children = (
 				8228DE811DAD7A5F00991184 /* AppDelegate.swift */,
 				8228DE831DAD7A5F00991184 /* ViewController.swift */,
+				8228DEAF1DAD7ACD00991184 /* RedContainerView.swift */,
+				8228DEB11DAD7AFD00991184 /* BlackContainerView.swift */,
+				8228DEB31DAD91F900991184 /* LeafButtonView.swift */,
+				8228DEB51DAD921700991184 /* LeafLabelView.swift */,
 				8228DE851DAD7A5F00991184 /* Main.storyboard */,
 				8228DE881DAD7A5F00991184 /* Assets.xcassets */,
 				8228DE8A1DAD7A5F00991184 /* LaunchScreen.storyboard */,
@@ -259,7 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8228DEB41DAD91F900991184 /* LeafButtonView.swift in Sources */,
+				8228DEB61DAD921700991184 /* LeafLabelView.swift in Sources */,
+				8228DEB01DAD7ACD00991184 /* RedContainerView.swift in Sources */,
 				8228DE841DAD7A5F00991184 /* ViewController.swift in Sources */,
+				8228DEB21DAD7AFD00991184 /* BlackContainerView.swift in Sources */,
 				8228DE821DAD7A5F00991184 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
