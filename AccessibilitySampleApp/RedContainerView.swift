@@ -23,25 +23,12 @@ public class RedContainerView : UIView
     override public var accessibilityElements: [Any]? {
         get {
             var elements: [Any]? = [Any]()
-            
-            let firstAccessibleElement = UIAccessibilityElement(accessibilityContainer: self)
-            firstAccessibleElement.accessibilityLabel = innerContainerView.accessibilityLabel
-            firstAccessibleElement.accessibilityIdentifier = innerContainerView.accessibilityIdentifier
-            firstAccessibleElement.accessibilityFrame = convert(innerContainerView.frame, to: nil)
+            let firstAccessibleElement = UIAccessibilityElement(accessibilityContainer: self, accessibilityElementView: innerContainerView)
+            let secondAccessibleElement = UIAccessibilityElement(accessibilityContainer: self, accessibilityElementView: innerContainerView.leafButton)
+            let thirdAccessibleElement = UIAccessibilityElement(accessibilityContainer: self, accessibilityElementView: innerContainerView.leafLabel)
             elements?.append(firstAccessibleElement)
-            
-            let secondAccessibleElement = UIAccessibilityElement(accessibilityContainer: self)
-            secondAccessibleElement.accessibilityLabel = innerContainerView.leafButton.accessibilityLabel
-            secondAccessibleElement.accessibilityIdentifier = innerContainerView.leafButton.accessibilityIdentifier
-            secondAccessibleElement.accessibilityFrame = convert(innerContainerView.leafButton.frame, to: self)
             elements?.append(secondAccessibleElement)
-            
-            let thirdAccessibleElement = UIAccessibilityElement(accessibilityContainer: self)
-            thirdAccessibleElement.accessibilityLabel = innerContainerView.leafLabel.accessibilityLabel
-            thirdAccessibleElement.accessibilityIdentifier = innerContainerView.leafLabel.accessibilityIdentifier
-            thirdAccessibleElement.accessibilityFrame = convert(innerContainerView.leafLabel.frame, to: self)
             elements?.append(thirdAccessibleElement)
-            
             return elements
         }
         set {}
@@ -61,3 +48,17 @@ public class RedContainerView : UIView
     }
     
 }
+
+public extension UIAccessibilityElement
+{
+    public convenience init(accessibilityContainer container: Any, accessibilityElementView view: UIView)
+    {
+        self.init(accessibilityContainer: container)
+        accessibilityLabel = view.accessibilityLabel
+        accessibilityHint = view.accessibilityHint
+        accessibilityValue = view.accessibilityValue
+        accessibilityFrame = view.accessibilityFrame
+        accessibilityTraits = view.accessibilityTraits
+    }
+}
+
